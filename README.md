@@ -80,3 +80,9 @@ Open a pull request 🎉
 This project is licensed under the MIT License.
 You are free to use, share, and modify it.
 
+## 🎥 Demo Video
+
+<video src="demo.mp4" controls width="100%" />
+
+
+
