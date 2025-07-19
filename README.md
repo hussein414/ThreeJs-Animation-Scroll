@@ -82,7 +82,10 @@ You are free to use, share, and modify it.
 
 ## 🎥 Demo Video
 
-<video src="demo.mp4" controls width="100%" />
+
+https://github.com/user-attachments/assets/d531b62c-d4ec-42eb-8d19-821ce80e27c8
+
+
 
 
 
