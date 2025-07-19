@@ -1,0 +1,236 @@
+// ------------------ Variables ------------------
+$bg-color: #1B1B1B;
+$text-color: #eef8ce;
+$highlight: #d1ff48;
+$accent-dark: #445022;
+$bg-header: #1B1B1B11;
+$grid-line: #eee1;
+
+$font-main: 'Poppins', sans-serif;
+$font-title: 'devil breeze', sans-serif;
+$font-sign: 'Bimbo', sans-serif;
+
+// ------------------ Imports ------------------
+@import url('https://fonts.cdnfonts.com/css/devil-breeze');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/bimbo');
+
+// ------------------ Base ------------------
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-main;
+  font-size: 14px;
+  background-image:
+          url(img/bg.png),
+          repeating-linear-gradient(to right, transparent 0 500px, #73814B33 500px 501px);
+  background-size: 100%;
+}
+
+// ------------------ Layout ------------------
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .decorate {
+    position: absolute;
+  }
+
+  .number {
+    font-family: $font-title;
+    font-size: 15em;
+    font-weight: bold;
+  }
+
+  .content-fit {
+    width: min(1200px, 90vw);
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    padding-block: 10em;
+
+    .title {
+      font-family: $font-title;
+      font-size: 5em;
+      font-weight: bold;
+    }
+  }
+}
+
+// ------------------ Header ------------------
+header {
+  padding-block: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  background-color: $bg-header;
+  background-image: repeating-linear-gradient(to right, transparent 0 500px, #{$grid-line} 500px 501px);
+
+  .content-fit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: unset !important;
+    padding-block: unset !important;
+
+    nav ul {
+      display: flex;
+      gap: 2em;
+    }
+  }
+}
+
+// ------------------ Sections ------------------
+#banner {
+  .title {
+    color: $highlight;
+    font-size: 11em;
+    font-family: $font-title;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: attr(data-before);
+      position: absolute;
+      top: 0.5em;
+      inset: 0.66em 0 0 0;
+      z-index: -1;
+      color: $accent-dark;
+    }
+  }
+}
+
+#intro {
+  .content-fit {
+    display: flex;
+    gap: 30%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+#description {
+  .content-fit {
+    padding-right: 30%;
+  }
+
+  .number {
+    font-size: 5em;
+  }
+
+  .title {
+    font-size: 7em;
+    font-weight: 500;
+  }
+}
+
+#contact {
+  .content-fit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  table {
+    width: min(800px, 90vw);
+    padding-top: 2em;
+    font-size: 2em;
+    margin: auto;
+
+    td {
+      padding-block: 0.5em;
+      border-bottom: 1px dashed $accent-dark;
+
+      &:nth-child(1) {
+        text-align: left;
+        font-weight: 500;
+      }
+
+      &:nth-child(2) {
+        text-align: right;
+        font-weight: 200;
+      }
+    }
+  }
+
+  .sign {
+    font-family: $font-sign;
+    font-size: 10em;
+  }
+}
+
+// ------------------ 3D Container ------------------
+#container3D {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+// ------------------ Responsive ------------------
+@media screen and (max-width: 1023px) {
+  #banner .title {
+    font-size: 5em;
+  }
+
+  #intro .content-fit {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .title {
+    font-size: 3em;
+  }
+
+  #intro .content-fit {
+    flex-direction: column;
+  }
+
+  .section .number {
+    font-size: 5em;
+  }
+
+  .section .content-fit .title {
+    font-size: 2em;
+  }
+
+  #description .content-fit {
+    padding-right: 0;
+  }
+
+  #contact {
+    table {
+      font-size: 1em;
+    }
+
+    .sign {
+      font-size: 2em;
+    }
+  }
+
+  #container3D {
+    position: absolute;
+  }
+}
