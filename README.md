@@ -45,41 +45,6 @@ The bee reacts to scrolling, mouse movements, and fills the environment with imm
 
 ---
 
-## 🛠 Getting Started
-
-```bash
-git clone https://github.com/your-username/3d-bee-animation.git
-cd 3d-bee-animation
-Then either:
-
-Open index.html directly in your browser
-or
-
-Run it using a local dev server:
-
-bash
-Copy
-Edit
-npx serve .
-
-🤝 Contributing
-Contributions, ideas, issues, and improvements are welcome!
-To contribute:
-
-Fork this repo
-
-Create a branch (git checkout -b feature-name)
-
-Commit your changes (git commit -m 'Add feature')
-
-Push to your fork (git push origin feature-name)
-
-Open a pull request 🎉
-
-📄 License
-This project is licensed under the MIT License.
-You are free to use, share, and modify it.
-
 ## 🎥 Demo Video
 
 
